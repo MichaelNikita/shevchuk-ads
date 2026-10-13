@@ -1,0 +1,416 @@
+<!doctype html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Максим Шевчук — Рекламне агентство: реклама як система</title>
+<meta name="description" content="ФОП Шевчук Максим Ігорович — послуги рекламного агентства: стратегія, креативи, таргетована та контекстна реклама, аналітика.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&family=Roboto+Mono:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root{--paper:#f5f2ea;--ink:#0a0a0a;--orange:#ff5a00;--muted:#6c6861;color:var(--ink);background:var(--paper);font-family:Inter,Arial,sans-serif;font-synthesis:none}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--paper);margin:0}
+button,a{font:inherit}
+button{cursor:pointer}
+svg.i{width:20px;height:20px;flex:none}
+.progress{z-index:1000;background:var(--orange);transform-origin:0;transform:scaleX(0);height:4px;position:fixed;top:0;left:0;right:0}
+header{border-bottom:1px solid var(--ink);z-index:50;background:var(--paper);justify-content:space-between;align-items:center;height:76px;padding:0 clamp(22px,4.5vw,72px);display:flex;position:relative}
+.wordmark{letter-spacing:-.05em;color:var(--ink);font-weight:900;text-decoration:none}
+.wordmark span{color:var(--orange)}
+nav{align-items:center;gap:32px;display:flex}
+nav a{color:var(--ink);text-transform:uppercase;font:700 12px Roboto Mono;text-decoration:none}
+nav button,.arrow-button,.final-cta button{background:var(--orange);color:#fff;border:0;align-items:center;gap:28px;padding:14px 18px;font:800 12px Roboto Mono;display:flex}
+.menu{background:0 0;border:0;display:none;color:var(--ink)}
+.hero{flex-direction:column;min-height:calc(100vh - 76px);padding:30px clamp(22px,4.5vw,72px) 42px;display:flex;position:relative}
+.hero-meta{letter-spacing:.08em;justify-content:space-between;font:700 11px Roboto Mono;display:flex}
+.hero-title{letter-spacing:-.085em;text-transform:uppercase;margin:auto 0 42px;font-size:clamp(52px,9.6vw,150px);font-weight:900;line-height:.76}
+.hero-title>span{letter-spacing:.02em;color:var(--orange);vertical-align:top;font-size:.32em}
+.hero-title i,.final-cta i{color:var(--orange);font-style:normal}
+.hero-lecturer{letter-spacing:.04em;text-transform:uppercase;margin:0 0 18px;font:700 clamp(12px,1.15vw,16px) Roboto Mono}
+.hero-lecturer strong{color:var(--orange);font-weight:900}
+.hero-bottom{border-top:1px solid var(--ink);grid-template-columns:1fr auto;align-items:end;padding-top:18px;display:grid}
+.hero-bottom p{max-width:640px;margin:0;font-size:clamp(16px,1.5vw,23px);line-height:1.3}
+.arrow-button{padding:18px 22px}
+.scroll-mark{color:var(--orange);position:absolute;top:45%;right:26px}
+.ticker{background:var(--ink);color:var(--paper);white-space:nowrap;padding:15px 0;font-size:18px;font-weight:800;overflow:hidden}
+.ticker div{width:max-content;will-change:transform}
+.statement,.audience,.program,.tariffs{border-bottom:1px solid var(--ink);padding:110px clamp(22px,4.5vw,72px)}
+.section-tag{letter-spacing:.08em;font:700 11px Roboto Mono}
+.statement h2,.section-head h2,.feature-intro h2,.final-cta h2{letter-spacing:-.075em;text-transform:uppercase;margin:60px 0;font-size:clamp(46px,8vw,120px);line-height:.82}
+.statement h2 em{color:var(--orange);font-style:normal}
+.statement-grid{border-top:1px solid var(--ink);grid-template-columns:1fr 1fr;gap:50px;padding-top:24px;display:grid}
+.statement-grid>p{max-width:520px;font-size:22px;line-height:1.4}
+.big-index{text-align:right;color:var(--orange);font-size:clamp(110px,18vw,260px);font-weight:900;line-height:.7}
+.big-index span{color:var(--ink);margin-top:25px;font:700 12px Roboto Mono;display:block}
+.lecturer{background:var(--ink);color:var(--paper);border-bottom:1px solid #444;padding:clamp(82px,10vw,150px) clamp(22px,4.5vw,72px)}
+.lecturer-grid{grid-template-columns:minmax(0,1.35fr) minmax(280px,.65fr);align-items:end;gap:clamp(48px,8vw,140px);margin-top:clamp(56px,8vw,110px);display:grid}
+.lecturer-kicker{letter-spacing:.1em;color:#aaa;margin:0 0 24px;font:700 11px Roboto Mono}
+.lecturer h2{letter-spacing:-.085em;text-transform:uppercase;margin:0;font-size:clamp(62px,10vw,150px);line-height:.78}
+.lecturer h2 i{color:var(--orange);font-style:normal}
+.lecturer-proof{border-top:1px solid #777;padding-top:24px}
+.lecturer-proof p{letter-spacing:-.04em;margin:0;font-size:clamp(24px,2.45vw,38px);line-height:1.08}
+.lecturer-proof strong{color:var(--orange);font-weight:800}
+.lecturer-proof span{color:#aaa;margin-top:28px;font-size:15px;line-height:1.55;display:block}
+.light{color:#aaa}
+.section-head{grid-template-columns:1fr 2fr;align-items:start;display:grid}
+.section-head h2{margin:0 0 70px}
+.audience-list{border-top:1px solid var(--ink)}
+.audience-list article{border-bottom:1px solid var(--ink);grid-template-columns:70px 1fr 1.4fr auto;align-items:center;gap:24px;padding:28px 0;display:grid}
+.audience-list article>span{color:var(--orange);font:700 12px Roboto Mono}
+.audience-list h3{letter-spacing:-.04em;text-transform:uppercase;margin:0;font-size:clamp(22px,3vw,42px)}
+.audience-list p{max-width:580px;color:var(--muted);line-height:1.5}
+.features{background:var(--ink);color:var(--paper);padding:110px clamp(22px,4.5vw,72px)}
+.feature-intro{grid-template-columns:1.7fr 1fr;align-items:end;display:grid}
+.feature-intro h2{margin:60px 0}
+.feature-intro i{color:var(--orange);font-style:normal}
+.feature-intro p{padding-bottom:60px;font-size:20px;line-height:1.5}
+.feature-grid{border-top:1px solid #777;grid-template-columns:repeat(4,1fr);display:grid}
+.feature{border-right:1px solid #555;min-height:300px;padding:26px 24px 60px 0}
+.feature:not(:first-child){padding-left:24px}
+.feature b{color:var(--orange);font:700 11px Roboto Mono}
+.feature h3{margin:90px 0 16px;font-size:22px}
+.feature p{color:#bcb9b2;line-height:1.5}
+.module-list{border-top:1px solid var(--ink)}
+.module-list article{border-bottom:1px solid var(--ink);grid-template-columns:80px 1.1fr 1.4fr 1fr;align-items:start;gap:24px;padding:30px 0;display:grid}
+.module-list span{color:var(--orange);font:700 12px Roboto Mono}
+.module-list h3{margin:0;font-size:28px}
+.module-list p{color:var(--muted);margin:0;line-height:1.5}
+.module-list b{text-transform:uppercase;font:700 12px/1.5 Roboto Mono}
+.tariffs .section-head{margin-top:60px}
+.tariffs .section-head p{max-width:430px;margin:0;font-size:18px;line-height:1.5}
+.tariff-grid{grid-template-columns:1fr 1fr;display:grid}
+.tariff-grid article{border:1px solid var(--ink);padding:30px;position:relative;display:flex;flex-direction:column}
+.tariff-grid article+article{border-left:0}
+.tariff-grid .featured{background:var(--orange);color:#fff}
+.tariff-mark{font:700 12px Roboto Mono}
+.choice{border:1px solid;padding:7px;font:700 10px Roboto Mono;position:absolute;top:20px;right:20px}
+.tariff-grid h3{letter-spacing:-.06em;margin:70px 0 30px;font-size:clamp(34px,5vw,68px)}
+.tariff-grid ul{border-top:1px solid;margin:0 0 50px;padding:0;list-style:none;flex:1}
+.tariff-grid li{border-bottom:1px solid;align-items:center;gap:10px;padding:16px 0;display:flex}
+.tariff-grid li svg{width:16px;height:16px}
+.tariff-grid button{border:1px solid var(--ink);background:var(--ink);color:#fff;justify-content:space-between;align-items:center;width:100%;padding:18px;font:800 12px Roboto Mono;display:flex}
+.featured button{color:var(--ink);background:#fff;border-color:#fff}
+.final-cta{background:var(--ink);min-height:75vh;color:var(--paper);flex-direction:column;justify-content:center;align-items:flex-start;padding:80px clamp(22px,4.5vw,72px);display:flex}
+.final-cta>span{color:var(--orange);font:700 12px Roboto Mono}
+.final-cta h2{margin:40px 0}
+.final-cta p{max-width:550px;font-size:20px;line-height:1.5}
+.final-cta button{margin-top:30px;padding:20px 24px}
+footer{border-top:1px solid var(--ink);justify-content:space-between;align-items:center;gap:24px;padding:30px clamp(22px,4.5vw,72px);font:600 11px Roboto Mono;display:flex}
+footer a{color:var(--ink)}
+.footer-info{text-align:center;gap:14px;display:grid}
+.footer-info p{margin:0;line-height:1.6}
+.legal{text-transform:uppercase;color:var(--muted);flex-wrap:wrap;justify-content:center;gap:18px;font:700 10px Roboto Mono;display:flex}
+.legal a{color:inherit;border-bottom:1px solid;padding-bottom:3px;text-decoration:none;transition:color .2s}
+.legal a:hover,.legal a:focus-visible{color:var(--orange)}
+.sticky{display:none}
+.modal-wrap{z-index:2000;background:#000b;justify-content:center;align-items:center;padding:20px;display:none;position:fixed;inset:0}
+.modal-wrap.open{display:flex}
+.modal{background:var(--paper);border-top:8px solid var(--orange);width:min(620px,100%);padding:40px;position:relative;max-height:100%;overflow:auto}
+.modal .close{background:0 0;border:0;position:absolute;top:18px;right:18px;color:var(--ink)}
+.modal>span{font:700 11px Roboto Mono}
+.modal h2{letter-spacing:-.06em;margin:35px 0;font-size:64px;line-height:.8;text-transform:uppercase}
+.modal p{line-height:1.5}
+.modal label{margin-top:22px;font:700 10px Roboto Mono;display:block}
+.modal input,.modal select{border:0;border-bottom:1px solid var(--ink);background:0 0;outline:none;width:100%;padding:12px 0;font-size:18px;display:block;border-radius:0;color:var(--ink)}
+.submit{background:var(--orange);color:#fff;border:0;justify-content:space-between;align-items:center;width:100%;margin-top:30px;padding:18px;font-weight:800;display:flex}
+.lead-note{color:var(--muted);margin:12px 0 0!important;font-size:10px!important;line-height:1.45!important}
+.lead-note a{color:inherit;text-underline-offset:2px}
+.reveal{clip-path:inset(0 0 100%);transform:translateY(18px);transition:clip-path .9s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1)}
+.reveal.in{clip-path:inset(0 0 0);transform:none}
+.slide{opacity:0;transform:translateX(-28px);transition:opacity .6s,transform .6s}
+.slide.in{opacity:1;transform:none}
+@media (width<=800px){
+  html,body{overflow-x:hidden}
+  header{height:64px}
+  nav{background:var(--paper);border-bottom:1px solid var(--ink);flex-direction:column;align-items:stretch;padding:24px;display:none;position:absolute;top:64px;left:0;right:0}
+  nav.open{display:flex}
+  .menu{display:block}
+  .hero{min-height:calc(100svh + 70px);overflow:hidden}
+  .hero-meta span:last-child{display:none}
+  .hero-lecturer{order:1;margin:18px 0 16px}
+  .hero-title{letter-spacing:-.065em;order:2;font-size:clamp(40px,10.5vw,54px);line-height:.88}
+  .hero-bottom{order:3;margin-bottom:64px;grid-template-columns:1fr}
+  .hero-bottom .arrow-button{display:none}
+  .scroll-mark{display:none}
+  .statement,.audience,.program,.tariffs,.features,.lecturer{padding-top:78px;padding-bottom:78px}
+  .statement h2,.section-head h2,.feature-intro h2,.final-cta h2{margin:42px 0;font-size:clamp(44px,14vw,74px)}
+  .statement-grid,.section-head,.feature-intro{grid-template-columns:1fr}
+  .big-index{text-align:left;margin-top:50px}
+  .lecturer-grid{grid-template-columns:1fr;gap:52px;margin-top:48px}
+  .lecturer h2{font-size:clamp(54px,16vw,92px)}
+  .lecturer-proof p{font-size:28px}
+  .audience-list article{grid-template-columns:42px 1fr auto;gap:14px}
+  .audience-list article p{grid-column:2/4;margin-top:0}
+  .features .feature-intro p{padding-bottom:30px}
+  .feature-grid{grid-template-columns:1fr 1fr}
+  .feature{border-bottom:1px solid #555;min-height:250px}
+  .module-list article{grid-template-columns:42px 1fr}
+  .module-list p,.module-list b{grid-column:2}
+  .tariff-grid{grid-template-columns:1fr}
+  .tariff-grid article+article{border-left:1px solid var(--ink);border-top:0}
+  .tariffs .section-head{margin-top:40px}
+  .sticky{z-index:500;background:var(--orange);color:#fff;border:0;justify-content:space-between;align-items:center;padding:17px 20px;font:800 12px Roboto Mono;display:flex;position:fixed;bottom:12px;left:12px;right:12px;box-shadow:0 8px 35px #0005}
+  footer{flex-direction:column;align-items:flex-start;gap:20px;padding-bottom:90px}
+  .footer-info{text-align:left}
+  .legal{justify-content:flex-start;gap:12px 18px}
+  .modal h2{font-size:52px}
+}
+@media (width<=500px){
+  .feature-grid{grid-template-columns:1fr}
+  .feature,.feature:not(:first-child){border-right:0;min-height:0;padding:24px 0}
+  .feature h3{margin:50px 0 10px}
+  .modal{padding:30px 24px}
+  .modal h2{font-size:46px}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .ticker div{transform:none!important}
+  .reveal,.slide{clip-path:none;opacity:1;transform:none;transition:none}
+}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></symbol>
+  <symbol id="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></symbol>
+</svg>
+<main>
+<div class="progress" id="progress"></div>
+
+<header>
+  <a class="wordmark" href="#top">ADS / <span>NOT NOISE</span></a>
+  <nav id="nav">
+    <a href="#about">Про агентство</a>
+    <a href="#services">Послуги</a>
+    <a href="#tariffs">Пакети</a>
+    <button data-lead>Залишити заявку</button>
+  </nav>
+  <button class="menu" id="menu" aria-label="Меню" aria-expanded="false">
+    <svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 5h16"/><path d="M4 12h16"/><path d="M4 19h16"/></svg>
+  </button>
+</header>
+
+<section class="hero" id="top">
+  <div class="hero-meta"><span>КВЕД 73.11</span><span>РЕКЛАМНЕ АГЕНТСТВО ПОВНОГО ЦИКЛУ</span></div>
+  <div class="hero-title reveal"><span>РЕКЛАМА:</span><br>ВІД БРИФУ<br>ДО ПРОДАЖІВ<br><i>СИСТЕМНО</i></div>
+  <p class="hero-lecturer">ЗАСНОВНИК — <strong>МАКСИМ ШЕВЧУК</strong></p>
+  <div class="hero-bottom">
+    <p>Не разові запуски «на вдачу». Повний цикл рекламної кампанії — від стратегії та креативів до запуску, аналітики й масштабування.</p>
+    <button class="arrow-button" data-lead>ОБГОВОРИТИ ПРОЄКТ <svg class="i"><use href="#arrow"/></svg></button>
+  </div>
+  <svg class="i scroll-mark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14"/><path d="m19 12-7 7-7-7"/></svg>
+</section>
+
+<div class="ticker" aria-hidden="true"><div id="ticker">БРИФ — СТРАТЕГІЯ — КРЕАТИВ — ЗАПУСК — АНАЛІТИКА — МАСШТАБУВАННЯ — БРИФ — СТРАТЕГІЯ — КРЕАТИВ — ЗАПУСК — АНАЛІТИКА — МАСШТАБУВАННЯ — БРИФ — СТРАТЕГІЯ — КРЕАТИВ — ЗАПУСК — АНАЛІТИКА — МАСШТАБУВАННЯ — </div></div>
+
+<section class="statement" id="about">
+  <span class="section-tag">[ 01 — ПІДХІД ]</span>
+  <div class="reveal"><h2>РЕКЛАМА — ЦЕ НЕ<br>ЗЛИВ БЮДЖЕТУ.<br><em>ЦЕ СИСТЕМА.</em></h2></div>
+  <div class="statement-grid">
+    <p>Кожен проєкт проходить шість послідовних етапів. На кожному ви отримуєте конкретний результат і розумієте, куди та навіщо йде рекламний бюджет.</p>
+    <div class="big-index">6<span>ЕТАПІВ</span></div>
+  </div>
+</section>
+
+<section class="lecturer" aria-labelledby="founder-title">
+  <span class="section-tag light">[ ЗАСНОВНИК ]</span>
+  <div class="lecturer-grid">
+    <div>
+      <p class="lecturer-kicker">ПРАКТИК, ЯКИЙ РАХУЄ РЕЗУЛЬТАТ</p>
+      <h2 id="founder-title">МАКСИМ<br><i>ШЕВЧУК</i></h2>
+    </div>
+    <div class="lecturer-proof">
+      <p>Веде <strong>рекламні кампанії</strong> для бізнесів у різних нішах і відповідає за проєкт <strong>особисто</strong>.</p>
+      <span>Від першого брифу до звіту — без посередників і втрат на передачі задач.</span>
+    </div>
+  </div>
+</section>
+
+<section class="audience">
+  <div class="section-head">
+    <span class="section-tag">[ 02 — ДЛЯ КОГО ]</span>
+    <h2>ВПІЗНАЄТЕ<br>СЕБЕ?</h2>
+  </div>
+  <div class="audience-list">
+    <article class="slide"><span>01</span><h3>Малому бізнесу</h3><p>Щоб запустити першу рекламу правильно й не витратити бюджет на тести без системи.</p><svg class="i"><use href="#arrow"/></svg></article>
+    <article class="slide"><span>02</span><h3>Онлайн-магазинам</h3><p>Щоб отримувати стабільний потік замовлень і контролювати вартість продажу.</p><svg class="i"><use href="#arrow"/></svg></article>
+    <article class="slide"><span>03</span><h3>Експертам і сервісам</h3><p>Щоб збирати заявки на послуги, консультації та навчальні продукти.</p><svg class="i"><use href="#arrow"/></svg></article>
+    <article class="slide"><span>04</span><h3>Брендам</h3><p>Щоб підвищити впізнаваність і будувати комунікацію, яку можна виміряти.</p><svg class="i"><use href="#arrow"/></svg></article>
+  </div>
+</section>
+
+<section class="features">
+  <span class="section-tag light">[ 03 — ЯК МИ ПРАЦЮЄМО ]</span>
+  <div class="feature-intro">
+    <h2>МЕНШЕ<br><i>ШУМУ.</i><br>БІЛЬШЕ<br>РЕЗУЛЬТАТУ.</h2>
+    <p>Кожен крок роботи прозорий: ви бачите, що робиться, скільки це коштує і що дає бізнесу.</p>
+  </div>
+  <div class="feature-grid">
+    <div class="feature reveal"><b>01</b><h3>ПРОЗОРІСТЬ</h3><p>Доступ до рекламних кабінетів і зрозумілі звіти — без «чорних скриньок».</p></div>
+    <div class="feature reveal"><b>02</b><h3>ДАНІ</h3><p>Рішення ухвалюємо на основі аналітики, а не відчуттів.</p></div>
+    <div class="feature reveal"><b>03</b><h3>ПОВНИЙ ЦИКЛ</h3><p>Стратегія → креатив → запуск → аналітика → масштабування.</p></div>
+    <div class="feature reveal"><b>04</b><h3>ОПТИМІЗАЦІЯ</h3><p>Не «запустили й забули», а постійне коригування кампаній.</p></div>
+  </div>
+</section>
+
+<section class="program" id="services">
+  <div class="section-head">
+    <span class="section-tag">[ 04 — ПОСЛУГИ ]</span>
+    <h2>ВІД ЗАПИТУ<br>ДО ПРОДАЖІВ</h2>
+  </div>
+  <div class="module-list">
+    <article><span>01</span><h3>БРИФ І АУДИТ</h3><p>Збираємо вихідні дані, аналізуємо продукт, попередню рекламу та конкурентів.</p><b>Результат: аудит і точне завдання</b></article>
+    <article><span>02</span><h3>РЕКЛАМНА СТРАТЕГІЯ</h3><p>Визначаємо цілі, аудиторії, канали, бюджет і ключові показники.</p><b>Результат: стратегія і медіаплан</b></article>
+    <article><span>03</span><h3>КРЕАТИВИ</h3><p>Розробляємо рекламні повідомлення, тексти, банери та відеоконцепції.</p><b>Результат: пакет креативів</b></article>
+    <article><span>04</span><h3>ТАРГЕТОВАНА РЕКЛАМА</h3><p>Налаштовуємо та ведемо кампанії в Facebook, Instagram, TikTok.</p><b>Результат: запущені кампанії</b></article>
+    <article><span>05</span><h3>КОНТЕКСТНА РЕКЛАМА</h3><p>Пошукова, медійна та торгова реклама в Google Ads.</p><b>Результат: кампанії Google Ads</b></article>
+    <article><span>06</span><h3>АНАЛІТИКА І ЗВІТ</h3><p>Налаштовуємо відстеження, читаємо дані, робимо висновки й плануємо масштабування.</p><b>Результат: звіт + план дій</b></article>
+  </div>
+</section>
+
+<section class="tariffs" id="tariffs">
+  <span class="section-tag">[ 05 — ПАКЕТИ ]</span>
+  <div class="section-head">
+    <h2>ОБЕРІТЬ<br>ФОРМАТ</h2>
+    <p>Вартість розраховується індивідуально після брифу — залежно від ніші, каналів і обсягу робіт.</p>
+  </div>
+  <div class="tariff-grid">
+    <article>
+      <span class="tariff-mark">01</span>
+      <h3>ЗАПУСК</h3>
+      <ul>
+        <li><svg><use href="#check"/></svg> Бриф і аудит</li>
+        <li><svg><use href="#check"/></svg> Рекламна стратегія</li>
+        <li><svg><use href="#check"/></svg> Налаштування кампаній в одному каналі</li>
+        <li><svg><use href="#check"/></svg> Налаштування аналітики</li>
+      </ul>
+      <button data-lead data-tariff="Запуск">ОБРАТИ ФОРМАТ <svg class="i"><use href="#arrow"/></svg></button>
+    </article>
+    <article class="featured">
+      <span class="tariff-mark">02</span>
+      <b class="choice">ПОВНИЙ ЦИКЛ</b>
+      <h3>ВЕДЕННЯ</h3>
+      <ul>
+        <li><svg><use href="#check"/></svg> Усе з пакета «Запуск»</li>
+        <li><svg><use href="#check"/></svg> Креативи щомісяця</li>
+        <li><svg><use href="#check"/></svg> Ведення та оптимізація кампаній</li>
+        <li><svg><use href="#check"/></svg> Щомісячний звіт і план дій</li>
+      </ul>
+      <button data-lead data-tariff="Ведення">ОБРАТИ ФОРМАТ <svg class="i"><use href="#arrow"/></svg></button>
+    </article>
+  </div>
+</section>
+
+<section class="final-cta">
+  <span>КВЕД 73.11 — РЕКЛАМНІ АГЕНТСТВА</span>
+  <h2>ЗБЕРІТЬ РЕКЛАМУ<br>У <i>СИСТЕМУ.</i></h2>
+  <p>Залиште заявку — ми зв’яжемося, проведемо бриф і запропонуємо формат співпраці.</p>
+  <button data-lead>ЗАЛИШИТИ ЗАЯВКУ <svg class="i"><use href="#arrow"/></svg></button>
+</section>
+
+<footer>
+  <a class="wordmark" href="#top">ADS / <span>NOT NOISE</span></a>
+  <div class="footer-info">
+    <p>ФОП Шевчук Максим Ігорович · РНОКПП 3960408138<br>КВЕД 73.11 Рекламні агентства</p>
+    <p><a href="mailto:shevc.m@gmail.com">shevc.m@gmail.com</a> · <a href="tel:+380686729422">+380 68 672 94 22</a></p>
+    <div class="legal" aria-label="Юридичні документи">
+      <a href="legal/privacy-policy.html" target="_blank" rel="noreferrer">Політика конфіденційності</a>
+      <a href="legal/public-offer.html" target="_blank" rel="noreferrer">Публічний договір</a>
+    </div>
+  </div>
+  <a href="#top">НА ПОЧАТОК ↑</a>
+</footer>
+
+<button class="sticky" data-lead>ЗАЛИШИТИ ЗАЯВКУ <svg class="i"><use href="#arrow"/></svg></button>
+</main>
+
+<div class="modal-wrap" id="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+  <div class="modal">
+    <button class="close" id="close" aria-label="Закрити">
+      <svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+    </button>
+    <span>[ ЗАЯВКА ]</span>
+    <h2 id="modal-title">ОБГОВОРИМО<br>ПРОЄКТ</h2>
+    <form id="lead-form">
+      <label for="f-name">ІМ’Я</label>
+      <input id="f-name" name="name" required autocomplete="name">
+      <label for="f-phone">ТЕЛЕФОН</label>
+      <input id="f-phone" name="phone" type="tel" required autocomplete="tel">
+      <label for="f-tariff">ФОРМАТ</label>
+      <select id="f-tariff" name="tariff">
+        <option>Ще не визначився</option>
+        <option>Запуск</option>
+        <option>Ведення</option>
+      </select>
+      <button class="submit" type="submit">НАДІСЛАТИ <svg class="i"><use href="#arrow"/></svg></button>
+      <p class="lead-note">Натискаючи кнопку, ви погоджуєтеся з <a href="legal/privacy-policy.html" target="_blank">політикою конфіденційності</a> та умовами <a href="legal/public-offer.html" target="_blank">публічного договору</a>.</p>
+    </form>
+    <p id="lead-done" hidden>Дякуємо! Заявку отримано — ми зв’яжемося з вами найближчим часом.</p>
+  </div>
+</div>
+
+<script>
+const progress = document.getElementById('progress');
+const ticker = document.getElementById('ticker');
+const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+function onScroll() {
+  const max = document.documentElement.scrollHeight - innerHeight;
+  progress.style.transform = `scaleX(${max > 0 ? scrollY / max : 0})`;
+  if (!reduced) ticker.style.transform = `translateX(${-(scrollY * 0.05) % 33.33}%)`;
+}
+addEventListener('scroll', onScroll, { passive: true });
+onScroll();
+
+// clip-path ховає елемент від IntersectionObserver, тому стежимо за батьком
+const io = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (!e.isIntersecting) return;
+    e.target.querySelectorAll(':scope > .reveal, :scope > .slide').forEach(el => el.classList.add('in'));
+    io.unobserve(e.target);
+  });
+}, { threshold: 0.1 });
+document.querySelectorAll('.slide').forEach((el, i) => { el.style.transitionDelay = `${(i % 4) * 80}ms`; });
+new Set([...document.querySelectorAll('.reveal, .slide')].map(el => el.parentElement)).forEach(p => io.observe(p));
+
+const nav = document.getElementById('nav');
+const menu = document.getElementById('menu');
+menu.addEventListener('click', () => {
+  const open = nav.classList.toggle('open');
+  menu.setAttribute('aria-expanded', open);
+});
+nav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => nav.classList.remove('open')));
+
+const modal = document.getElementById('modal');
+const form = document.getElementById('lead-form');
+const done = document.getElementById('lead-done');
+const tariff = document.getElementById('f-tariff');
+
+function openModal(t) {
+  nav.classList.remove('open');
+  if (t) tariff.value = t;
+  form.hidden = false;
+  done.hidden = true;
+  modal.classList.add('open');
+  document.getElementById('f-name').focus();
+}
+function closeModal() { modal.classList.remove('open'); }
+
+document.querySelectorAll('[data-lead]').forEach(b => b.addEventListener('click', () => openModal(b.dataset.tariff)));
+document.getElementById('close').addEventListener('click', closeModal);
+modal.addEventListener('click', e => { if (e.target === modal) closeModal(); });
+addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+
+form.addEventListener('submit', e => {
+  e.preventDefault();
+  // TODO: підключити відправку заявки (Telegram-бот / Google Sheets / CRM)
+  form.reset();
+  form.hidden = true;
+  done.hidden = false;
+});
+</script>
+</body>
+</html>
