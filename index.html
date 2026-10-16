@@ -93,6 +93,10 @@ nav button,.arrow-button,.final-cta button{background:var(--accent);color:#fff;b
 .tariff-grid li svg{width:16px;height:16px}
 .tariff-grid button{border:1px solid var(--ink);background:var(--ink);color:#fff;justify-content:space-between;align-items:center;width:100%;padding:18px;font:800 12px Roboto Mono;display:flex}
 .featured button{color:var(--ink);background:#fff;border-color:#fff}
+.tariff-for{margin:-14px 0 30px;line-height:1.5;max-width:460px}
+.price{letter-spacing:-.06em;margin:0;font-size:clamp(44px,5.5vw,76px);font-weight:900;line-height:.9}
+.price-sub{margin:8px 0 24px;font:700 11px Roboto Mono;text-transform:uppercase}
+.price-note{color:var(--muted);margin:24px 0 0;max-width:760px;font:700 11px/1.6 Roboto Mono;text-transform:uppercase}
 .final-cta{background:var(--ink);min-height:75vh;color:var(--paper);flex-direction:column;justify-content:center;align-items:flex-start;padding:80px clamp(22px,4.5vw,72px);display:flex}
 .final-cta>span{color:var(--accent);font:700 12px Roboto Mono}
 .final-cta h2{margin:40px 0}
@@ -275,33 +279,40 @@ footer a{color:var(--ink)}
   <span class="section-tag">[ 05 — ПАКЕТИ ]</span>
   <div class="section-head">
     <h2>ОБЕРІТЬ<br>ФОРМАТ</h2>
-    <p>Вартість розраховується індивідуально після брифу — залежно від ніші, каналів і обсягу робіт.</p>
+    <p>Два формати співпраці з фіксованою вартістю послуг агентства. Рекламний бюджет на майданчиках оплачується окремо.</p>
   </div>
   <div class="tariff-grid">
     <article>
       <span class="tariff-mark">01</span>
       <h3>ЗАПУСК</h3>
+      <p class="tariff-for">Разовий запуск реклами з нуля: аналізуємо бізнес, будуємо стратегію й налаштовуємо кампанії під ключ.</p>
       <ul>
         <li><svg><use href="#check"/></svg> Бриф і аудит</li>
-        <li><svg><use href="#check"/></svg> Рекламна стратегія</li>
-        <li><svg><use href="#check"/></svg> Налаштування кампаній в одному каналі</li>
+        <li><svg><use href="#check"/></svg> Рекламна стратегія і медіаплан</li>
+        <li><svg><use href="#check"/></svg> Налаштування кампаній в одному каналі (Meta або Google Ads)</li>
         <li><svg><use href="#check"/></svg> Налаштування аналітики</li>
       </ul>
+      <div class="price">8 000 грн</div>
+      <p class="price-sub">одноразово</p>
       <button data-lead data-tariff="Запуск">ОБРАТИ ФОРМАТ <svg class="i"><use href="#arrow"/></svg></button>
     </article>
     <article class="featured">
       <span class="tariff-mark">02</span>
       <b class="choice">ПОВНИЙ ЦИКЛ</b>
       <h3>ВЕДЕННЯ</h3>
+      <p class="tariff-for">Щомісячне ведення реклами: креативи, оптимізація кампаній і звітність.</p>
       <ul>
         <li><svg><use href="#check"/></svg> Усе з пакета «Запуск»</li>
         <li><svg><use href="#check"/></svg> Креативи щомісяця</li>
         <li><svg><use href="#check"/></svg> Ведення та оптимізація кампаній</li>
         <li><svg><use href="#check"/></svg> Щомісячний звіт і план дій</li>
       </ul>
+      <div class="price">15 000 грн</div>
+      <p class="price-sub">на місяць</p>
       <button data-lead data-tariff="Ведення">ОБРАТИ ФОРМАТ <svg class="i"><use href="#arrow"/></svg></button>
     </article>
   </div>
+  <p class="price-note">Ціни вказані в гривнях, ПДВ не передбачено. Рекламний бюджет (оплата рекламним майданчикам) не входить у вартість і погоджується окремо.</p>
 </section>
 
 <section class="final-cta">
